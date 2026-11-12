@@ -62,7 +62,7 @@ Through this project, I practised writing conditional statements to handle diffe
 
 ## Author
 
-**GitHub:** [aledjan1](https://github.com/aledjan1)
+Project link: https://aledjan1.github.io/Check-Age/
 
 ## Project Status
 
