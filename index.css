@@ -1,0 +1,306 @@
+
+/* General */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 40px 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111827;
+
+  background: linear-gradient(
+    135deg,
+    #f5f3ff,
+    #ede9fe,
+    #faf5ff
+  );
+}
+
+/* Main card */
+
+.age-checker {
+  width: 100%;
+  max-width: 650px;
+
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 40px;
+
+  box-shadow: 0 15px 45px rgba(91, 33, 182, 0.12);
+}
+
+/* Header */
+
+.header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.header-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ede9fe;
+  border-radius: 50%;
+}
+
+.header-icon svg {
+  width: 38px;
+  height: 38px;
+  fill: #7c3aed;
+}
+
+.header h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.header p {
+  font-size: 17px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Form */
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group label {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  height: 58px;
+
+  padding: 0 18px;
+
+  border: 2px solid #d1d5db;
+  border-radius: 12px;
+
+  font-size: 18px;
+  color: #111827;
+
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.form-group input:focus {
+  border-color: #7c3aed;
+}
+
+/* Error */
+
+.error-message {
+  min-height: 16px;
+  font-size: 13px;
+  color: #dc2626;
+}
+
+.form-group input.input-error {
+  border-color: #ef4444;
+}
+
+/* Button */
+
+.check-btn {
+  width: 100%;
+  padding: 17px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #9333ea,
+    #6d28d9
+  );
+
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.check-btn:hover {
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.25);
+}
+
+.check-btn:active {
+  transform: scale(0.98);
+}
+
+/* Result */
+
+.result-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  margin-top: 28px;
+  padding: 25px 20px;
+
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  border-radius: 14px;
+
+  text-align: center;
+}
+
+.result-icon {
+  display: none;
+
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #7c3aed;
+  color: #ffffff;
+
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.result-text {
+  font-size: 19px;
+  font-weight: 600;
+  color: #6d28d9;
+}
+
+/* Result states */
+
+.result-box.is-child {
+  background: #fef3c7;
+  border-color: #fde68a;
+}
+
+.result-box.is-child .result-text {
+  color: #92400e;
+}
+
+.result-box.is-child .result-icon {
+  background: #d97706;
+}
+
+.result-box.is-teenager {
+  background: #ede9fe;
+  border-color: #c4b5fd;
+}
+
+.result-box.is-teenager .result-text {
+  color: #6d28d9;
+}
+
+.result-box.is-teenager .result-icon {
+  background: #7c3aed;
+}
+
+.result-box.is-adult {
+  background: #dcfce7;
+  border-color: #bbf7d0;
+}
+
+.result-box.is-adult .result-text {
+  color: #166534;
+}
+
+.result-box.is-adult .result-icon {
+  background: #16a34a;
+}
+
+.result-box.has-result .result-icon {
+  display: flex;
+}
+
+/* Rules */
+
+.rules-box {
+  margin-top: 26px;
+  padding: 24px;
+
+  background: #f8fafc;
+  border-radius: 14px;
+}
+
+.rules-box h2 {
+  font-size: 19px;
+  margin-bottom: 14px;
+}
+
+.rules-box ul {
+  padding-left: 25px;
+}
+
+.rules-box li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+
+  .age-checker {
+    padding: 25px 20px;
+  }
+
+  .header h1 {
+    font-size: 29px;
+  }
+
+  .header p {
+    font-size: 15px;
+  }
+
+  .result-text {
+    font-size: 16px;
+  }
+
+  .rules-box {
+    padding: 18px;
+  }
+}
